@@ -14,7 +14,7 @@ import java.util.List;
 @Setter
 public class Member {
     @Id
-    @GeneratedValue
+    @GeneratedValue//ID 값이 항상 들어가 있음
     @Column(name = "member_id")
     private Long id;
 

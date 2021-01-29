@@ -1,0 +1,19 @@
+#spring:
+#  datasource:
+#    url: jdbc:h2:mem:test #메모리 모드로 동작가능(h2)
+#    username: sa
+#    password:
+#    driver-class-name: org.h2.Driver
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: create-drop #create entity drop 후에 create #마지막에 application  종료시  drop
+#    properties:
+#      hibernate:
+##        show_sql: true #System.out.println()으로 로그생성
+#        format_sql: true
+#Spring 부트는 별도의 설정이 없으면 메모리 모드로 띄움
+logging:
+  level:
+    org.hibernate.SQL: debug #logger를 통해 로그 찍음
+    org.hibernate.type: trace

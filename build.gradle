@@ -25,6 +25,7 @@ dependencies {
     //재시작 없이 리로딩 가능
     implementation 'org.springframework.boot:spring-boot-devtools'
     implementation 'junit:junit:4.12'
+    implementation 'org.hibernate.validator:hibernate-validator:6.1.2.Final'
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'com.h2database:h2'
     annotationProcessor 'org.projectlombok:lombok'
