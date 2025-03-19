@@ -5,9 +5,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Member {
+
     @Id
     @GeneratedValue
     @Column(name = "MEMBER_ID")
@@ -16,6 +20,7 @@ public class Member {
     private String city;
     private String street;
     private String zipcode;
+
 
     public Long getId() {
         return id;
@@ -56,4 +61,6 @@ public class Member {
     public void setZipcode(String zipcode) {
         this.zipcode = zipcode;
     }
+
 }
+
