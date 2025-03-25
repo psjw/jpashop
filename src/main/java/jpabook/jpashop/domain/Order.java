@@ -20,14 +20,14 @@ public class Order extends BaseEntity{
     @JoinColumn(name = "MEMBER_ID")
     private Member member;
 
-    @OneToMany(mappedBy = "order")
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL) // Order를 persist하면 orderItems도 persist된다.
     private List<OrderItem> orderItems = new ArrayList<>();
 
     private LocalDateTime orderDate;
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL) // Order를 persist하면 delivery도 persist된다.
     @JoinColumn(name = "DELIVERY_ID")
     private Delivery delivery;
 
